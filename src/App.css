@@ -1,0 +1,15 @@
+.MovieList .Container {
+  margin-top: 5rem;
+  background-color: chartreuse;
+}
+.Input {
+  margin: 2rem;
+
+  border-radius: 5px;
+
+  color: #fff;
+}
+.RatingStar {
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
