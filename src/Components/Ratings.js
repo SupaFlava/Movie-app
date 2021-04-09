@@ -10,7 +10,7 @@ function Ratings({ getStar }) {
     getStar(changeRate);
   };
   return (
-    <div className="App">
+    <div className="Stars">
       <ReactStars
         value={changeRate}
         count={5}

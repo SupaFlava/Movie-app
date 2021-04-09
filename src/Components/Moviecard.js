@@ -24,10 +24,11 @@ function Moviecard({ addMovie }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Add A movie
-      </Button>
-
+      <div className="AddBtn">
+        <Button variant="primary" onClick={handleShow}>
+          Add A movie
+        </Button>
+      </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Add New Movie...</Modal.Title>
