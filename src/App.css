@@ -7,7 +7,7 @@ body {
   margin-bottom: 3rem;
   margin-left: 1rem;
   display: flex;
-  width: 90%vw;
+  width: 100;
   align-items: center;
   justify-content: space-between;
   align-self: center;
@@ -22,10 +22,18 @@ Button {
 }
 .Stars {
   display: flex;
+  width: 30%;
 
   margin-left: 4rem;
 }
 .Stars,
 Button {
   margin-left: 1rem;
+}
+.Title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffff;
+}
+.Title:hover {
+  color: #ffd700;
 }

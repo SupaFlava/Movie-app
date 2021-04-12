@@ -3,7 +3,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import ReactStars from "react-rating-stars-component";
-import Container from "react-bootstrap/Container";
+
 
 const MovieList = ({ movies }) => {
   return (
@@ -16,7 +16,7 @@ const MovieList = ({ movies }) => {
               src={movie.Poster}
               alt="movie"
             />
-            <Card.Title style={{ color: "#FFF", marginTop: "1rem" }}>
+            <Card.Title style={{ color: "#000000", marginTop: "1rem" }}>
               {movie.Title}
             </Card.Title>
             <Card.Subtitle>{movie.description}</Card.Subtitle>

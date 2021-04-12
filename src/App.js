@@ -5,6 +5,7 @@ import MovieList from "./Components/MovieList";
 import Moviecard from "./Components/Moviecard";
 import Ratings from "./Components/Ratings";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   const [movies, setMovies] = useState([
@@ -48,10 +49,6 @@ const App = () => {
   };
   const [starRate, setStarRate] = useState(0);
 
-  const filterStars = (starRate) => {
-    const updateStars = movies.filter((movie) => movie.Rating >= starRate);
-    setStarRate(updateStars);
-  };
   // keyword Search
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState(movies);
@@ -72,26 +69,27 @@ const App = () => {
   };
 
   return (
-    <>
-      <div className="NavBar">
-        <input
-          className="Input"
-          type="text"
-          placeholder="search..."
-          value={search}
-          onChange={filterMovies}
-        />
-        <h1 style={{ color: "#f7f7f7", fontFamily: "Sans Sarif" }}>
-          Movie App{" "}
-        </h1>
+    <Router>
+      <>
+        <div className="NavBar">
+          <input
+            className="Input"
+            type="text"
+            placeholder="search..."
+            value={search}
+            onChange={filterMovies}
+          />
+          <h1 className="Title">GoMyMovie </h1>
 
-        <Ratings className="RatingStar" getStar={getStar} />
-      </div>
+          <Ratings className="RatingStar" getStar={getStar} />
+        </div>
+        
 
-      <MovieList className="MovieList" movies={searchResult} />
+        <MovieList className="MovieList" movies={searchResult} />
 
-      <Moviecard className="MovieCard" addMovie={addMovie} />
-    </>
+        <Moviecard className="MovieCard" addMovie={addMovie} />
+      </>
+    </Router>
   );
 };
 
