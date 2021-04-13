@@ -4,7 +4,6 @@ import { Button } from "react-bootstrap";
 
 function Ratings({ getStar }) {
   const [changeRate, setChanngeRate] = useState(1);
-  console.log(changeRate);
 
   const gettheRealStar = () => {
     getStar(changeRate);
