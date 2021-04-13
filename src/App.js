@@ -17,7 +17,7 @@ const App = () => {
       description:
         "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
       Rating: 5,
-      Trailer: "https://www.youtube.com/embed/NmzuHjWmXOc",
+      Trailer: "https://youtu.be/NmzuHjWmXOc",
       Poster:
         "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
     },
@@ -100,9 +100,8 @@ const App = () => {
             exact
             render={(props) => <Description movies={movies} />}
           />
-
-          <Moviecard className="MovieCard" addMovie={addMovie} />
         </Switch>
+        <Moviecard className="MovieCard" addMovie={addMovie} />
       </>
     </Router>
   );
